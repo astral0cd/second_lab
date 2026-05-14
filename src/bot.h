@@ -6,5 +6,5 @@ struct Bot{
 
 };
 
-Point GetBotShot(); // Функция которая отдает координаты выстрела бота
+Point GetBotShot(std::mt19937 rng); // Функция которая отдает координаты выстрела бота
 void SetBotResult(Result result); // Функция, которая говорит боту результат выстрела
