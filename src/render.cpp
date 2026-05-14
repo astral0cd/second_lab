@@ -58,10 +58,8 @@ static void CollectShipCells(const Board& b,
 static std::vector<std::vector<Cell>> GetShips(const Board& b)
 {
     std::vector<std::vector<Cell>> ships;
-    std::vector<std::vector<bool>> used(
-        BOARD_SIZE,
-        std::vector<bool>(BOARD_SIZE, false)
-    );
+    std::array<std::array<bool, BOARD_SIZE>, BOARD_SIZE> used{};
+    for(auto& row : used) row.fill(false);
 
     for (int y = 0; y < BOARD_SIZE; y++)
     {
