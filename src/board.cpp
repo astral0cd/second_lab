@@ -52,7 +52,6 @@ void PlaceShipsRandom(Board& b, std::mt19937& rng){
     }
 }
 
-#include <vector>
 
 static bool IsSank(const Board& board,
                  int x,
