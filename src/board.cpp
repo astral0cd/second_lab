@@ -121,10 +121,8 @@ void MarkSunkShip(Board& board, Point hitPoint)
     if (board[hitPoint.y][hitPoint.x] != Cell::Hit)
         return;
 
-    std::vector<std::vector<bool>> visited(
-        BOARD_SIZE,
-        std::vector<bool>(BOARD_SIZE, false)
-    );
+    std::array<std::array<bool, BOARD_SIZE>, BOARD_SIZE> visited{};
+    for(auto& row : visited) row.fill(false);
 
     std::vector<Point> ship;
 
