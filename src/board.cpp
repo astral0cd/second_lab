@@ -53,10 +53,11 @@ void PlaceShipsRandom(Board& b, std::mt19937& rng){
 }
 
 
-static bool IsSank(const Board& board,
-                 int x,
-                 int y,
-                 std::vector<std::vector<bool>>& visited)
+#include <array>
+static bool IsSank(const Board& board, 
+    int x, 
+    int y, 
+    std::array<std::array<bool, BOARD_SIZE>, BOARD_SIZE>& visited)
 {
     if (!InBounds(x, y))
         return true;
