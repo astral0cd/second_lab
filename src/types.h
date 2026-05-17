@@ -11,11 +11,14 @@ struct Point { int x, y; };
 
 using Board = std::vector<std::vector<Cell>>;
 
+struct Bot {};
+
 struct GameState {
     Board playerBoard;
     Board enemyBoard;
     Turn turn = Turn::Player;
     bool gameOver = false;
     bool playerWon = false;
+    Bot bot;
 };
 
