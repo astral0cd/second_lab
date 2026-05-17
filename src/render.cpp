@@ -3,7 +3,7 @@
 #include "raylib.h"
 
 #include <algorithm>
-#include <vector>
+#include <array>
 
 constexpr int CELL = 32;
 

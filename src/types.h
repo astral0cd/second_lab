@@ -11,7 +11,9 @@ struct Point { int x, y; };
 
 using Board = std::vector<std::vector<Cell>>;
 
-struct Bot {};
+struct Bot {
+    std::vector<Point> availableCells;
+};
 
 struct GameState {
     Board playerBoard;
